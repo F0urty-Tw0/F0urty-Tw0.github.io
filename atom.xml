@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>42&#39;Blog</title>
   
-  <subtitle>test1</subtitle>
+  <subtitle>Do not go gentle into that good night.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>

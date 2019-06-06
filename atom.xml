@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-05T09:06:40.564Z</updated>
+  <updated>2019-06-06T06:35:08.098Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>标签测试</title>
+    <link href="http://yoursite.com/2019/06/06/tags_test/"/>
+    <id>http://yoursite.com/2019/06/06/tags_test/</id>
+    <published>2019-06-06T06:31:27.841Z</published>
+    <updated>2019-06-06T06:35:08.098Z</updated>
+    
+    <content type="html"><![CDATA[<p>#第一级标题test</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#第一级标题test&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="http://yoursite.com/categories/CTF/"/>
+    
+    
+      <category term="代码审计" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/"/>
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

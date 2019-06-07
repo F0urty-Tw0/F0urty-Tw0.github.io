@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>42&#39;s Blog</title>
   
-  <subtitle>Do not go gentle into that good night. Old age should burn and rave at close of the day.</subtitle>
+  <subtitle>Do not go gentle into that good night.&lt;br&gt; Old age should burn and rave at close of the day.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>

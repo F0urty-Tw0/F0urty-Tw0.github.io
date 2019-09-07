@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-06T12:18:21.877Z</updated>
+  <updated>2019-09-06T12:24:47.309Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于我</title>
+    <link href="http://yoursite.com/2019/09/06/about_me1/"/>
+    <id>http://yoursite.com/2019/09/06/about_me1/</id>
+    <published>2019-09-06T12:24:47.308Z</published>
+    <updated>2019-09-06T12:24:47.309Z</updated>
+    
+    <content type="html"><![CDATA[<p>#19秋软件工程基础第一次作业</p><p>–|:–:|–:</p><p>|这个作业属于哪个课程|<a href>课程链接</a>|</p><p>|这个作业要求在哪里 |<a href>作业要求链接</a>|</p><p>|我在这个课程的目标是|掌握软件工程这门课的核心知识点，对职业规划有清晰的认识，在完成该课程之后对未来学习历程</p><hr><p>##一、关于我</p><p>-博客园博客地址: <a href="https://www.cnblogs.com/FourtyTwo/" target="_blank" rel="noopener"></a></p><p>-个人优点大概是自控与自学能力较强，对感兴趣的事物有着强烈的好奇心与求知欲</p><p>-平常喜欢跑步和乒乓球</p><p>-大一的一学年里通过自学倒也学了不少东西，但大多都不是很精通/(ㄒoㄒ)/~~，新的一学年争取把之前落下的东西补回来，把学的不扎实的东西再巩固一下</p><p>-之前通过Hexo+Github搭建了个人博客，以记录学习过程中遇到的各种问题，但已经停更挺长时间了〒▽〒，也希望借此机会能够督促自己，多多记录自己的学习历程(ง •_•)ง<br>(==&gt;<a href="https://f0urty-tw0.github.io/" target="_blank" rel="noopener">My blog</a>)</p><hr><p>##二、阅读与思考</p><p><strong>阅读以上材料，并回答下面几个问题：</strong></p><p>（1）回想一下你初入大学时对你所在专业的畅想</p><pre><code>-**当初你是如何做出选择你所在专业的决定的？**其实在高中对计算机相关专业的认知并不是很清晰，在选择志愿前也是通过知乎了解到计算机相关专业就业率与薪酬都比较高，-**你认为过去一（两）年中接触到的课程是否符合你对你自己所在专业的期待，为什么？**-**你觉得你所在的专业是你喜欢的领域吗，它是你擅长的领域吗？**-**将来你会选择从事和你专业相关的工作吗？是的话给出你想去的城市、公司和岗位，否的话给出原因**</code></pre><p>（2）对照前人们走过的路和描述未来发展，现在的你</p><pre><code>-**自我感觉你已经具备的专业知识、技能、能力有哪些？已经写过的代码量是多少？描述你做的最复杂的项目/作业。**-**离成为一个合格的本科毕业生，在专业知识、技能、能力上还差距哪些？**</code></pre><p>（3）目前是一个人生选择的十字路口，考研、工作、考公、出国，不同的选择在大三就有不同的努力方向。而无论考研还是工作的每条路径，也有许多不同的分支。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#19秋软件工程基础第一次作业&lt;/p&gt;
+&lt;p&gt;–|:–:|–:&lt;/p&gt;
+&lt;p&gt;|这个作业属于哪个课程|&lt;a href&gt;课程链接&lt;/a&gt;|&lt;/p&gt;
+&lt;p&gt;|这个作业要求在哪里 |&lt;a href&gt;作业要求链接&lt;/a&gt;|&lt;/p&gt;
+&lt;p&gt;|我在这个课程的目标是|掌握软件工程这门课的
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>PHP变量覆盖</title>
